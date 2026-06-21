@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>bet365 简明指南 · 访问与场景速览</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f7fafc;
+      color: #1a2b3c;
+      line-height: 1.6;
+      padding: 1.25rem;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 2rem;
+      box-shadow: 0 8px 32px rgba(0, 70, 60, 0.06);
+      overflow: hidden;
+      padding: 1.8rem 1.8rem 2.8rem;
+    }
+
+    /* 顶部导航 */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 2px solid #e0f0ed;
+      margin-bottom: 2rem;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: -0.3px;
+    }
+
+    .logo-dot {
+      width: 10px;
+      height: 10px;
+      background: #00b4a0;
+      border-radius: 3px 50% 50% 50%;
+      display: inline-block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #2d4a5c;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: #00b4a0; }
+
+    /* hero */
+    .hero {
+      text-align: center;
+      padding: 1.5rem 0 2.2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 650;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.6rem;
+      background: linear-gradient(135deg, #115e6b, #00897a);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #3a5568;
+      font-size: 1.05rem;
+    }
+
+    .hero .tag {
+      display: inline-block;
+      background: #e2f3f0;
+      color: #007a6b;
+      padding: 0.25rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-top: 0.8rem;
+    }
+
+    /* 网格卡片 — 三个场景模块 */
+    .scenes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 2.2rem 0 2.4rem;
+    }
+
+    .scene-card {
+      background: #ffffff;
+      border: 1px solid #e4f0ed;
+      border-radius: 1.5rem;
+      padding: 1.6rem 1.2rem 1.4rem;
+      transition: all 0.15s ease;
+      box-shadow: 0 2px 6px rgba(0, 30, 30, 0.02);
+    }
+
+    .scene-card:hover {
+      border-color: #00b4a0;
+      box-shadow: 0 8px 20px rgba(0, 140, 120, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .scene-card .icon {
+      width: 40px;
+      height: 40px;
+      background: #d5f0ea;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+      color: #007a6b;
+    }
+
+    .scene-card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #1a3a40;
+    }
+
+    .scene-card p {
+      font-size: 0.92rem;
+      color: #3f5a68;
+      margin-bottom: 0.6rem;
+    }
+
+    .scene-card .note {
+      font-size: 0.8rem;
+      background: #f2faf8;
+      padding: 0.3rem 0.7rem;
+      border-radius: 30px;
+      display: inline-block;
+      color: #00695c;
+    }
+
+    /* 核心介绍 + 嵌入链接 */
+    .core-intro {
+      background: #f1f9f7;
+      border-radius: 1.8rem;
+      padding: 1.8rem 2rem;
+      margin: 1.8rem 0 2rem;
+      position: relative;
+    }
+
+    .core-intro h2 {
+      font-size: 1.5rem;
+      font-weight: 620;
+      margin-bottom: 0.6rem;
+      color: #0b4d54;
+    }
+
+    .core-intro p {
+      margin-bottom: 0.8rem;
+    }
+
+    .core-intro a {
+      color: #00897a;
+      font-weight: 600;
+      text-decoration: underline 2px #b2dfdb;
+      text-underline-offset: 3px;
+      transition: text-decoration-color 0.15s;
+    }
+
+    .core-intro a:hover { text-decoration-color: #007a6b; }
+
+    /* 常见说明 / FAQ 摘要 */
+    .faq-compact {
+      margin-top: 2.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: #fafdfc;
+      border-left: 4px solid #00b4a0;
+      padding: 0.9rem 1.2rem;
+      border-radius: 0 1.2rem 1.2rem 0;
+    }
+
+    .faq-item .q {
+      font-weight: 600;
+      color: #0a4a4a;
+      display: flex;
+      gap: 0.4rem;
+      align-items: baseline;
+    }
+
+    .faq-item .q::before {
+      content: "▸";
+      color: #00b4a0;
+      font-weight: bold;
+    }
+
+    .faq-item .a {
+      margin-top: 0.2rem;
+      color: #3a5a68;
+      font-size: 0.92rem;
+    }
+
+    /* 提示条 */
+    .tip-bar {
+      background: #e6f3f0;
+      border-radius: 60px;
+      padding: 0.6rem 1.4rem;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #1c5e5a;
+      margin: 1.2rem 0 0.4rem;
+    }
+
+    .tip-bar span { font-size: 1.2rem; }
+
+    hr {
+      border: none;
+      border-top: 2px solid #edf7f4;
+      margin: 1.8rem 0 1rem;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #65818d;
+      border-top: 1px solid #e2efea;
+      padding-top: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    /* 响应式微调 */
+    @media (max-width: 640px) {
+      .container { padding: 1.2rem 0.8rem 2rem; border-radius: 1.2rem; }
+      .hero h1 { font-size: 1.8rem; }
+      .top-nav { flex-direction: column; align-items: flex-start; }
+      .nav-links { gap: 0.8rem 1.2rem; }
+      .core-intro { padding: 1.4rem 1.2rem; }
+      .scenes-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 导航 -->
+  <nav class="top-nav">
+    <div class="logo-area">
+      <span class="logo-dot"></span>
+      <span>Stream·Guide</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">概览</a>
+      <a href="#">场景</a>
+      <a href="#">说明</a>
+      <a href="#">备忘</a>
+    </div>
+  </nav>
+
+  <!-- hero -->
+  <div class="hero">
+    <h1>用对视角，看对信息</h1>
+    <p>围绕 <strong>bet365</strong> 的基本使用思路与访问要点，整理一份轻量导航——不堆叠功能，只厘清路径。</p>
+    <div class="tag">简明指南 · 稳定连接意识</div>
+  </div>
+
+  <!-- 三个场景模块 -->
+  <div class="scenes-grid">
+    <div class="scene-card">
+      <div class="icon">📡</div>
+      <h3>日常信息流</h3>
+      <p>通过平台浏览实时动态、赛事列表与统计摘要，适合保持对节奏的感知。</p>
+      <span class="note">关注入口稳定性</span>
+    </div>
+    <div class="scene-card">
+      <div class="icon">🔄</div>
+      <h3>多端适应</h3>
+      <p>桌面端与移动端界面布局有差异，熟悉后能快速定位常用面板。</p>
+      <span class="note">网络环境建议</span>
+    </div>
+    <div class="scene-card">
+      <div class="icon">🧭</div>
+      <h3>功能探索</h3>
+      <p>从账户设置到偏好调整，所有模块均围绕同一账户体系展开。</p>
+      <span class="note">逐步熟悉即可</span>
+    </div>
+  </div>
+
+  <!-- 核心介绍 + 链接嵌入句子 -->
+  <div class="core-intro">
+    <h2>从访问习惯开始</h2>
+    <p>很多人第一次接触 <a href="https://stream-bet365.com">bet365</a> 时，容易把注意力全放在内容量上，反而忽略了最基本的访问路径与网络条件。实际上，顺畅的浏览体验往往取决于三个因素：浏览器的兼容性、网络连接的质量，以及是否使用了正确的直达链接。我们推荐将 <a href="https://stream-bet365.com">bet365</a> 加入书签栏，减少每次手动输入的出错可能。</p>
+    <p>另外，部分区域可能会出现间歇性加载延迟，这并非平台本身问题。建议先检查本地网络，或尝试切换一个稳定的 DNS。长期使用同一网络环境下的用户，通常能获得更一致的页面响应。</p>
+    <div class="tip-bar">
+      <span>💡</span> 若页面样式异常，可尝试清除缓存或使用无痕窗口测试
+    </div>
+  </div>
+
+  <!-- 常见说明 / FAQ 摘要 -->
+  <div class="faq-compact">
+    <div class="faq-item">
+      <div class="q">为什么有时候页面提示“加载中”很久？</div>
+      <div class="a">大部分原因与本地网络延迟或运营商路由有关。可尝试刷新1–2次，或更换时间段访问。持续无法加载时，检查防火墙或代理设置。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">移动端与电脑端看到的内容一样吗？</div>
+      <div class="a">核心数据一致，但移动端为触摸操作做了卡片式布局与简化菜单。建议根据使用场景选择设备，并没有功能上的缺失。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">是否需要反复登录？</div>
+      <div class="a">同一设备上通常保持登录状态，除非你手动退出或清除浏览器数据。保持浏览器设置稳定可以减少重复验证。</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="footer-note">
+    本页为信息导航 · 无诱导内容 · 请根据自身理解合理使用
+  </div>
+</div>
+</body>
+</html>
